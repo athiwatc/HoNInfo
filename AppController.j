@@ -11,7 +11,7 @@
 
 @implementation AppController : CPObject
 {
-    CPWindow    theWindow; //this "outlet" is connected automatically by the Cib
+    @outlet CPWindow    theWindow; //this "outlet" is connected automatically by the Cib
 	@outlet CPTextField expNeeded;
 	@outlet CPPopUpButton level;
 	
@@ -52,6 +52,7 @@
 
     // In this case, we want the window from Cib to become our full browser window
     [theWindow setFullPlatformWindow:YES];
+
 
 	//Add the level popup box to level 25
 	for (var i=4; i < 26; i++) {
